@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C61494FC2A72C96600509250 /* NoteAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61494FB2A72C96600509250 /* NoteAppApp.swift */; };
-		C61494FE2A72C96600509250 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61494FD2A72C96600509250 /* ContentView.swift */; };
 		C61495002A72C96700509250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61494FF2A72C96700509250 /* Assets.xcassets */; };
 		C61495032A72C96700509250 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C61495022A72C96700509250 /* Preview Assets.xcassets */; };
 		C614950A2A72C9C500509250 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61495092A72C9C500509250 /* Note.swift */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		C61494F82A72C96600509250 /* NoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61494FB2A72C96600509250 /* NoteAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteAppApp.swift; sourceTree = "<group>"; };
-		C61494FD2A72C96600509250 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C61494FF2A72C96700509250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C61495022A72C96700509250 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C61495092A72C9C500509250 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 			children = (
 				C614950E2A72CCD500509250 /* Views */,
 				C61494FB2A72C96600509250 /* NoteAppApp.swift */,
-				C61494FD2A72C96600509250 /* ContentView.swift */,
 				C61494FF2A72C96700509250 /* Assets.xcassets */,
 				C61495012A72C96700509250 /* Preview Content */,
 			);
@@ -171,7 +168,6 @@
 				C61495142A741D1500509250 /* Filters.swift in Sources */,
 				C614950D2A72CA5D00509250 /* Tag.swift in Sources */,
 				C61495122A740C3700509250 /* TagListView.swift in Sources */,
-				C61494FE2A72C96600509250 /* ContentView.swift in Sources */,
 				C61495102A72CCE500509250 /* NoteListView.swift in Sources */,
 				C61494FC2A72C96600509250 /* NoteAppApp.swift in Sources */,
 				C614950A2A72C9C500509250 /* Note.swift in Sources */,

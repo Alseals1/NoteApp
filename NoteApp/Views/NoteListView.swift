@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct NoteListView: View {
-    
     /*To manage instances of your model classes at runtime, use a model context - the object responsible for the in-memory model data and coordination with the model container to successfully persist that data. To get a context for your model container that's bound to the main actor, use the mode1Context environment variable: */
     @Environment(\.modelContext) var context
     @Query(sort: \.createdAt, order: .reverse) var allNotes: [Note]
@@ -58,11 +57,11 @@ struct NoteListView: View {
                     ForEach(allNotes) { note in
                         VStack(alignment: .leading) {
                             Text(note.content)
+                            
                             if note.tags.count > 0 {
                                 HStack {
                                     Text("Tags:")
                                         .font(.caption)
-                                
                                     Text("#" + note.tags.map { $0.name }.joined(separator: ", "))
                                         .font(.caption)
                                         .foregroundStyle(Color.mint)

@@ -1,20 +1,11 @@
-//
-//  NoteAppApp.swift
-//  NoteApp
-//
-//  Created by Alandis Seals on 7/27/23.
-//
-
 import SwiftUI
 import SwiftData
 
 @main
 struct NoteAppApp: App {
-    
     @State var noteSearchText: String = ""
     @State var noteSortBy = NoteSortBy.createdby
     @State var noteOrderBy = OrderBy.descending
-    
     @State var tageSearcgText = ""
     @State var tagOrderBy = OrderBy.ascending
     
@@ -71,9 +62,7 @@ struct NoteAppApp: App {
                         } label: {
                             Label(noteSortBy.text, systemImage: "arrow.up.arrow.down")
                         }
-
                     }
-                    
                 }
         }
         .tabItem { Label("Notes", systemImage: "note") }

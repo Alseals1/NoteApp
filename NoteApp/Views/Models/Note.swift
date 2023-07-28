@@ -11,7 +11,6 @@ import SwiftData
 @Model
 class Note {
     @Attribute(.unique) var id: String?
-    
     var content: String
     var createdAt: Date
     @Relationship(inverse: \Tag.notes) var tags: [Tag]
@@ -22,5 +21,4 @@ class Note {
         self.createdAt = createdAt
         self.tags = tags
     }
-    
 }
