@@ -24,6 +24,7 @@ struct NoteListView: View {
                     
                     Button(action: {
                         creteNote()
+                        noteText = ""
                     }, label: {
                         Text("Save")
                     })
@@ -39,6 +40,12 @@ struct NoteListView: View {
                             Text(note.createdAt, style: .time)
                                 .font(.caption)
                         }
+                    }
+                    .onDelete{ indexSet in
+                        indexSet.forEach { index in
+                            context.delete(allNotes[index])
+                        }
+                        //try? context.save()
                     }
                 }
             }
