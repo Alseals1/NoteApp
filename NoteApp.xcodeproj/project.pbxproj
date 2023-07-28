@@ -14,6 +14,7 @@
 		C614950A2A72C9C500509250 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61495092A72C9C500509250 /* Note.swift */; };
 		C614950D2A72CA5D00509250 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614950C2A72CA5D00509250 /* Tag.swift */; };
 		C61495102A72CCE500509250 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614950F2A72CCE500509250 /* NoteListView.swift */; };
+		C61495122A740C3700509250 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61495112A740C3700509250 /* TagListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C61495092A72C9C500509250 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		C614950C2A72CA5D00509250 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		C614950F2A72CCE500509250 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		C61495112A740C3700509250 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				C614950E2A72CCD500509250 /* Views */,
-				C614950B2A72CA4900509250 /* Models */,
 				C61494FB2A72C96600509250 /* NoteAppApp.swift */,
 				C61494FD2A72C96600509250 /* ContentView.swift */,
 				C61494FF2A72C96700509250 /* Assets.xcassets */,
@@ -88,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				C614950F2A72CCE500509250 /* NoteListView.swift */,
+				C61495112A740C3700509250 /* TagListView.swift */,
+				C614950B2A72CA4900509250 /* Models */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C614950D2A72CA5D00509250 /* Tag.swift in Sources */,
+				C61495122A740C3700509250 /* TagListView.swift in Sources */,
 				C61494FE2A72C96600509250 /* ContentView.swift in Sources */,
 				C61495102A72CCE500509250 /* NoteListView.swift in Sources */,
 				C61494FC2A72C96600509250 /* NoteAppApp.swift in Sources */,
