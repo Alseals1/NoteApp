@@ -10,6 +10,14 @@ import SwiftData
 
 @main
 struct NoteAppApp: App {
+    
+    @State var noteSearchText: String = ""
+    @State var noteSortBy = NoteSortBy.createdby
+    @State var noteOrderBy = OrderBy.descending
+    
+    @State var tageSearcgText = ""
+    @State var tagOrderBy = OrderBy.ascending
+    
     var body: some Scene {
         WindowGroup {
             TabView {
@@ -21,10 +29,52 @@ struct NoteAppApp: App {
         }
     }
     
+    var noteListQuery: Query<Note, [Note]> {
+        let sortOrder: SortOrder = noteOrderBy == .ascending ? .forward : .reverse
+        var predicate: Predicate<Note>?
+        if !noteSearchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            predicate = .init(#Predicate { $0.content.contains(noteSearchText) })
+        }
+        if noteSortBy == .content {
+            return Query(filter: predicate, sort: \.content, order: sortOrder)
+        } else {
+            return Query(filter: predicate, sort: \.createdAt, order: sortOrder)
+        }
+    }
+    
     var noteList: some View {
         NavigationStack {
-            NoteListView()
+            NoteListView(allNotes: noteListQuery)
+                .searchable(text: $noteSearchText, prompt: "Search")
+                .textInputAutocapitalization(.never)
                 .navigationTitle("Notes")
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Menu {
+                            Picker("Sort By", selection: $noteOrderBy) {
+                                ForEach(NoteSortBy.allCases) {
+                                    Text($0.text).id($0)
+                                }
+                            }
+                        } label: {
+                            Label(noteOrderBy.text, systemImage: "line.horizontal.3.decrease.circle")
+                        }
+
+                    }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Menu {
+                            Picker("Order By", selection: $noteOrderBy) {
+                                ForEach(OrderBy.allCases) {
+                                    Text($0.text).id($0)
+                                }
+                            }
+                        } label: {
+                            Label(noteSortBy.text, systemImage: "arrow.up.arrow.down")
+                        }
+
+                    }
+                    
+                }
         }
         .tabItem { Label("Notes", systemImage: "note") }
     }
