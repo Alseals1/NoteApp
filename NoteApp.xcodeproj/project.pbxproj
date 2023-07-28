@@ -59,6 +59,7 @@
 		C61494FA2A72C96600509250 /* NoteApp */ = {
 			isa = PBXGroup;
 			children = (
+				C614950B2A72CA4900509250 /* Models */,
 				C614950E2A72CCD500509250 /* Views */,
 				C61494FB2A72C96600509250 /* NoteAppApp.swift */,
 				C61494FF2A72C96700509250 /* Assets.xcassets */,
@@ -90,7 +91,6 @@
 			children = (
 				C614950F2A72CCE500509250 /* NoteListView.swift */,
 				C61495112A740C3700509250 /* TagListView.swift */,
-				C614950B2A72CA4900509250 /* Models */,
 			);
 			path = Views;
 			sourceTree = "<group>";
